@@ -5,12 +5,12 @@ const loadModel = async () => {
   // const model = await tflite.loadTFLiteModel('./models/hair_segmentation.tflite'); // lite model not work yet
   const model = await tf.loadLayersModel('../models/best_model_1.json');
 
+  const startTime = performance.now();
   const outputTensor = tf.tidy(() => {
     const img = tf.browser.fromPixels(document.getElementById('sample'));
     const input = img.expandDims().div(127.5).sub(1);
 
     // first prediction takes > 500ms
-    const startTime = performance.now();
     let outputTensor = model.predict(input);
     console.log('Prediction time: ', performance.now() - startTime);
 
@@ -24,6 +24,7 @@ const loadModel = async () => {
     return outputTensor.round().add(1).mul(127.5).squeeze();
   });
   const data = Array.from(outputTensor.dataSync())
+  console.log('Prediction time: ', performance.now() - startTime);
   const rgbaImage = Array.from(new Float32Array(320*320*4));
   for(let i = 0, j = 0; i < 320 * 320 * 4, j < 320 * 320; i += 4, j += 1){
     if(data[j] === 255){

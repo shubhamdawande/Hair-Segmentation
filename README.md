@@ -1,6 +1,6 @@
 # README
 
-### This is a neural network based implementation for solving the hair segmentation problem on selfie cameras
+### This is a neural network based implementation for solving the hair segmentation on selfie cameras
 
 
 ### Details
@@ -15,3 +15,7 @@
 - demo-app:- webapp for predicting on webcam & image data
 - dataset:- data preparation scripts
 - converter.sh:- Tensorflow to TFJS model format converter
+
+### Results on images:
+![Screenshot](result.png)
+prediction time: ~40ms
