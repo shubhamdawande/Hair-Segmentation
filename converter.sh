@@ -1,0 +1,1 @@
+tensorflowjs_converter --input_format keras /Users/shubhamdawande/my-projects/hair_segmentation/demo-app/models/best_model_1.h5 /Users/shubhamdawande/my-projects/hair_segmentation/demo-app/models
