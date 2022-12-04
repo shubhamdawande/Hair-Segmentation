@@ -136,3 +136,4 @@ dmypy.json
 *.ppm
 *.DS_Store
 *.txt
+!result.png
