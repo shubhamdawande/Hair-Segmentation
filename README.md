@@ -4,7 +4,7 @@
 
 
 ### Details
-- Architecture: Modified U-Net based implemented with keras
+- Architecture: Modified U-Net network implemented with keras
 - Training platform: Google colab T4 GPU
 - Deployment Backend: Tensorflow JS on browser via webgl
 - Input dataset: Sampled images from CelebA dataset and generated segmentation masks
