@@ -1,21 +1,21 @@
 # README
 
-### This is a neural network based implementation for solving the hair segmentation on selfie cameras
+### This is a neural network implementation inspired from U-NET for generating the hair segmentation masks on image as well as video data.
 
 
 ### Details
-- Architecture: Modified U-Net network implemented with keras
+- Architecture: Modified U-Net network implemented with keras. Details of the NN model are inside `main.ipynb`
 - Training platform: Google colab T4 GPU
 - Deployment Backend: Tensorflow JS on browser via webgl
 - Input dataset: Sampled images from CelebA dataset and generated segmentation masks
 - Execution speed: ~10 video frames per second
 
 ### Relevant files:
-- hair_segmentation.ipynb:- training script
-- demo-app:- webapp for predicting on webcam & image data
+- main.ipynb:- training script
+- demo-app:- webapp for predicting on webcam & images
 - dataset:- data preparation scripts
 - converter.sh:- Tensorflow to TFJS model format converter
 
 ### Results on images:
 ![Screenshot](result.png)
-prediction time: ~40ms
+prediction time: ~33ms
