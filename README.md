@@ -1,6 +1,6 @@
 # README
 
-### This is a neural network implementation inspired from U-NET for generating the hair segmentation masks on image as well as video data.
+### This is a neural network implementation inspired from U-NET for generating hair segmentation masks on image & video data. Built for virtual try-on of beauty products.
 
 
 ### Details
@@ -19,3 +19,6 @@
 ### Results on images:
 ![Screenshot](result.png)
 prediction time: ~33ms
+
+### TODO
+Handle temporal inconsistency for videos
